@@ -1,0 +1,37 @@
+.home-page {
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+
+    .image {
+      user-select: none;
+      max-height: 250px;
+      flex: 0 1 auto;
+      border-radius: 10px;
+    }
+  }
+
+  .pagination {
+    margin-block: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    button {
+      cursor: pointer;
+      background-color: blueviolet;
+      color: white;
+      height: 2.5rem;
+      padding-inline: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export {imagesModel} from "./model"

@@ -1,0 +1,31 @@
+{
+  "name": "harhive",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@farfetched/core": "^0.13.2",
+    "@withease/contracts": "^1.1.0",
+    "clsx": "^2.1.1",
+    "effector": "^23.3.0",
+    "effector-vue": "^23.1.1",
+    "patronum": "^2.3.0",
+    "vue": "^3.5.17"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.7",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "@vue/tsconfig": "^0.7.0",
+    "browserslist": "^4.25.1",
+    "lightningcss": "^1.30.1",
+    "sass": "^1.89.2",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0",
+    "vue-tsc": "^2.2.10"
+  }
+}

@@ -1,0 +1,22 @@
+.base-layout {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  .header {
+    height: 64px;
+  }
+
+  .content {
+
+  }
+
+  .footer {
+    height: 64px;
+  }
+}
