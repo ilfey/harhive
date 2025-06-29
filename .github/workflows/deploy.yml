@@ -11,9 +11,12 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    name: Build
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -37,8 +40,6 @@ jobs:
 
       - name: Build project
         run: pnpm run build
-        env:
-          VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
