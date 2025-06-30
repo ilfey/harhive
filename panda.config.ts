@@ -1,4 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
+import browserslist from 'browserslist';
 
 const isProduction =
   (process.env.PANDA_ENV ?? process.env.NODE_ENV) === 'production';
@@ -7,6 +8,7 @@ export default defineConfig({
   // Whether to use css reset
   preflight: false,
   lightningcss: true,
+  browserslist: browserslist('>= 0.25%'),
   polyfill: true,
   clean: true,
 
