@@ -1,30 +1,34 @@
 <script
-    setup
-    lang="ts"
+  setup
+  lang="ts"
 >
-import "./BaseLayout.scss"
-import {Surface} from "shared/ui/Surface";
-import {Text} from "shared/ui/Text";
+import {box} from 'generated/patterns/box';
+import {vstack} from 'generated/patterns/vstack';
+
+const layoutChild = box({
+  maxW: 1440,
+  marginInline: 'auto',
+});
 </script>
 
 <template>
-  <div class="base-layout">
-    <Surface
-        component="header"
-        class="header"
+  <div
+    :class="vstack({
+    alignItems: 'center',
+  })"
+  >
+    <header
+      :class="layoutChild"
     >
 
-    </Surface>
-    <Surface class="content">
+    </header>
+    <main :class="layoutChild">
       <slot />
-    </Surface>
-    <Surface
-        component="footer"
-        class="footer"
-    >
-      <Text span>
+    </main>
+    <footer :class="layoutChild">
+      <span>
         &copy; ilfey
-      </Text>
-    </Surface>
+      </span>
+    </footer>
   </div>
 </template>

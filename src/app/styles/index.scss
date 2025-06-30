@@ -1,0 +1,26 @@
+@layer reset, base, tokens, recipes, utilities;
+
+@layer reset {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  button {
+    font-family: inherit;
+    border: none;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: Manrope, serif;
+    background-color: black;
+    color: white;
+  }
+}

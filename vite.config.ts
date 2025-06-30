@@ -27,6 +27,7 @@ export default defineConfig({
       "widgets": resolve(__dirname, "./src/widgets"),
       "features": resolve(__dirname, "./src/features"),
       "shared": resolve(__dirname, "./src/shared"),
+      "generated": resolve(__dirname, "./src/generated"),
     }
   }
 })
