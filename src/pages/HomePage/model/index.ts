@@ -1,9 +1,8 @@
 import {createEvent, createStore, sample} from "effector";
 import {imagesModel} from "features/images";
-import {debug, not} from "patronum";
+import {not} from "patronum";
 import {ImageItem} from "shared/api/image";
 import {appStarted} from "shared/config";
-
 
 export const fetchImages = createEvent<{
   startIndex: number;
@@ -21,8 +20,6 @@ sample({
   }),
   target: imagesModel.fetchWithTimemark
 })
-
-debug(imagesModel.fetchWithTimemark)
 
 sample({
   clock: imagesModel.$images,

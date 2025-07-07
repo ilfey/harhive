@@ -1,6 +1,6 @@
+import {box, vstack} from "generated/patterns";
 import {ReactNode} from 'react';
 import './BaseLayout.scss';
-import {box, vstack} from 'generated/patterns';
 
 type BaseLayoutProps = {
   children?: ReactNode;
@@ -24,9 +24,7 @@ export const BaseLayout = ({children}: BaseLayoutProps): any => {
       </main>
 
       <footer className={layoutChild}>
-        <span>
-          &copy; ilfey
-        </span>
+
       </footer>
     </div>
   );
