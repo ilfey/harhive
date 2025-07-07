@@ -2,19 +2,20 @@ import {createApiQuery} from "../createApiQuery";
 import {imagesContract} from "./model";
 
 export type ImagesPayload = {
-  page?: number,
+  offset: number,
+  limit: number,
   timemark?: number,
 }
 
 export const createImagesQuery = () =>
   createApiQuery({
-    request: ({page, ...rest}: ImagesPayload) => ({
+    request: ({limit, offset, ...rest}: ImagesPayload) => ({
       url: "/api/",
       method: "GET",
       query: {
         action: 'img-list',
-        number: 20,
-        row: (page ?? 1) * 20,
+        number: limit,
+        row: offset,
         ...rest,
       },
     }),

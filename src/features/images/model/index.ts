@@ -1,12 +1,12 @@
-import {createStore, sample} from "effector";
+import {createEvent, createStore, sample} from "effector";
 import {createImagesQuery, ImageItem} from "shared/api/image";
-import {createPagination} from "shared/lib/factory/pagination";
+import {ImagesPayload} from "shared/api/image/requests";
 import {atom} from "shared/lib/utils/atom";
 
 export const imagesModel = atom(() => {
   const imagesQuery = createImagesQuery()
 
-  const pagination = createPagination()
+  const fetchWithTimemark = createEvent<Omit<ImagesPayload, 'timemark'>>()
 
   const $images = createStore<ImageItem[]>([])
   const $timemark = createStore<number | null>(null)
@@ -26,19 +26,20 @@ export const imagesModel = atom(() => {
   })
 
   sample({
-    clock: pagination.$page,
+    clock: fetchWithTimemark,
     source: $timemark,
     filter: Boolean,
-    fn: (timemark, page) => ({
+    fn: (timemark, payload) => ({
       timemark,
-      page,
+      ...payload,
     }),
     target: imagesQuery.refresh,
   })
 
   return {
     imagesQuery,
-    pagination,
+
+    fetchWithTimemark,
 
     $images,
   }

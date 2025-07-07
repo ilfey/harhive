@@ -1,14 +1,12 @@
-import {appStarted} from "shared/config/init";
-import "../styles/index.scss"
-import "generated/styles.css"
-import {createApp} from "vue";
-import App from "../ui/App.vue";
-import MasonryWall from '@yeger/vue-masonry-wall';
+import {createRoot} from 'react-dom/client';
+import {appStarted} from 'shared/config/init';
+import '../styles/index.scss';
+import 'generated/styles.css';
+import {App} from '../ui/App';
 
-appStarted()
 
-const app = createApp(App)
+const root = createRoot(document.querySelector('#root')!);
 
-app.use(MasonryWall)
+appStarted();
 
-app.mount('#app')
+root.render(App());

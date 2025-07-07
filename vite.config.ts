@@ -1,4 +1,4 @@
-import vue from '@vitejs/plugin-vue'
+import react from '@vitejs/plugin-react-swc';
 import browserslist from 'browserslist';
 import {browserslistToTargets} from "lightningcss";
 import {resolve} from 'path'
@@ -10,7 +10,7 @@ const isGithubPages = process.env.GITHUB_ACTIONS === 'true'
 export default defineConfig({
   base: isGithubPages ? '/harhive/' : undefined,
   plugins: [
-    vue(),
+    react({plugins: [['@effector/swc-plugin', {}]]}),
   ],
   css: {
     transformer: 'lightningcss',
