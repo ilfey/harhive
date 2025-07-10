@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react-swc';
 import preload from "vite-plugin-preload";
+import { VitePWA } from 'vite-plugin-pwa'
 import browserslist from 'browserslist';
 import {browserslistToTargets} from "lightningcss";
 import {resolve} from 'path'
@@ -14,6 +15,11 @@ export default defineConfig({
   plugins: [
     react({plugins: [['@effector/swc-plugin', {}]]}),
     preload(),
+
+    // https://vite-pwa-org.netlify.app/
+    VitePWA({
+      registerType: 'autoUpdate',
+    })
   ],
   css: {
     transformer: 'lightningcss',
