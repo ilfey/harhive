@@ -4,6 +4,7 @@ import {browserslistToTargets} from "lightningcss";
 import {resolve} from 'path'
 import {defineConfig} from 'vite'
 
+
 const isGithubPages = process.env.GITHUB_ACTIONS === 'true'
 
 // https://vite.dev/config/
@@ -20,6 +21,9 @@ export default defineConfig({
   },
   build: {
     cssMinify: 'lightningcss',
+  },
+  define: {
+    isGithubPages: isGithubPages,
   },
   resolve: {
     alias: {

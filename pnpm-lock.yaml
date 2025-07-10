@@ -14,15 +14,27 @@ importers:
       '@withease/contracts':
         specifier: ^1.1.0
         version: 1.1.0
+      atomic-router:
+        specifier: ^0.12.0
+        version: 0.12.0(effector@23.3.0)(history@5.3.0)
+      atomic-router-react:
+        specifier: ^0.12.1
+        version: 0.12.1(atomic-router@0.12.0(effector@23.3.0)(history@5.3.0))(effector-react@23.3.0(effector@23.3.0)(react@19.1.0))(effector@23.3.0)(react@19.1.0)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      compose-function:
+        specifier: ^3.0.3
+        version: 3.0.3
       effector:
         specifier: ^23.3.0
         version: 23.3.0
       effector-react:
         specifier: ^23.3.0
         version: 23.3.0(effector@23.3.0)(react@19.1.0)
+      history:
+        specifier: ^5.3.0
+        version: 5.3.0
       masonic:
         specifier: ^4.1.0
         version: 4.1.0(react@19.1.0)
@@ -42,6 +54,9 @@ importers:
       '@pandacss/dev':
         specifier: ^0.54.0
         version: 0.54.0(typescript@5.8.3)
+      '@types/compose-function':
+        specifier: ^0.0.33
+        version: 0.0.33
       '@types/node':
         specifier: ^24.0.7
         version: 24.0.7
@@ -84,6 +99,10 @@ packages:
     resolution: {integrity: sha512-qnzXzDXdr/po3bOTbTIQZ7+TxNKxpkN5IifVLXS+r7qwynkZfPyjZfE7hCXbo7IoO9TNcSyibgONsf2HauUd3Q==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+
+  '@babel/runtime@7.27.6':
+    resolution: {integrity: sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==}
+    engines: {node: '>=6.9.0'}
 
   '@babel/types@7.27.7':
     resolution: {integrity: sha512-8OLQgDScAOHXnAz2cV+RfzzNMipuLVBz2biuAJFMV9bfkNf393je3VM8CLkjQodW5+iWsSJdSgSWT6rsZoXHPw==}
@@ -639,6 +658,9 @@ packages:
   '@ts-morph/common@0.25.0':
     resolution: {integrity: sha512-kMnZz+vGGHi4GoHnLmMhGNjm44kGtKUXGnOvrKmMwAuvNjM/PgKVGfUnL7IDvK7Jb2QQ82jq3Zmp04Gy+r3Dkg==}
 
+  '@types/compose-function@0.0.33':
+    resolution: {integrity: sha512-fGdk1WbpAUsHYFfDDGlMz/opAPtYY1NckXWRUGf2AZPuMD7kNBjMsg+GK5QM7my8qs8w4X6m/XXHmzA9wSASUg==}
+
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
@@ -699,9 +721,28 @@ packages:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
 
+  arity-n@1.0.4:
+    resolution: {integrity: sha512-fExL2kFDC1Q2DUOx3whE/9KoN66IzkY4b4zUHUBFM1ojEYjZZYDcUW3bek/ufGionX9giIKDC5redH2IlGqcQQ==}
+
   astral-regex@2.0.0:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
+
+  atomic-router-react@0.12.1:
+    resolution: {integrity: sha512-JmOeyw7kBq3rVHZK1B1ItS8cvnTxUTFGM9XeNBntoyD3o+sm33hsqJnvsEq3u1tMu7SNEefPyGkSQ0U3CZVM6w==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      atomic-router: ^0.12.0
+      effector: ^22.8.8 || ^23
+      effector-react: ^22.1.0 || ^23
+      react: ^17 || ^18 || ^19
+
+  atomic-router@0.12.0:
+    resolution: {integrity: sha512-X3AMlGrQFwMrzGgXhhTpAgMYBZ/HrVvGH5c2j2I/XHgA0H5IIPB9o9fU6CH5cFadBpHNzKdqj0ViFwW7IXKaNQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      effector: ^22.8.8 || ^23
+      history: ^5.3.0
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -753,6 +794,9 @@ packages:
 
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+
+  compose-function@3.0.3:
+    resolution: {integrity: sha512-xzhzTJ5eC+gmIzvZq+C3kCJHsp9os6tJkrigDRZclyGtOKINbZtE8n1Tzmeh32jW+BUDPbvZpibwvJHBLGMVwg==}
 
   confbox@0.1.8:
     resolution: {integrity: sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w==}
@@ -865,6 +909,9 @@ packages:
 
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
+
+  history@5.3.0:
+    resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
 
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
@@ -1106,6 +1153,9 @@ packages:
   path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
+
+  path-to-regexp@6.3.0:
+    resolution: {integrity: sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==}
 
   pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
@@ -1388,6 +1438,8 @@ snapshots:
   '@babel/parser@7.27.7':
     dependencies:
       '@babel/types': 7.27.7
+
+  '@babel/runtime@7.27.6': {}
 
   '@babel/types@7.27.7':
     dependencies:
@@ -1905,6 +1957,8 @@ snapshots:
       path-browserify: 1.0.1
       tinyglobby: 0.2.14
 
+  '@types/compose-function@0.0.33': {}
+
   '@types/estree@1.0.8': {}
 
   '@types/node@17.0.45': {}
@@ -1980,7 +2034,23 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
 
+  arity-n@1.0.4: {}
+
   astral-regex@2.0.0: {}
+
+  atomic-router-react@0.12.1(atomic-router@0.12.0(effector@23.3.0)(history@5.3.0))(effector-react@23.3.0(effector@23.3.0)(react@19.1.0))(effector@23.3.0)(react@19.1.0):
+    dependencies:
+      atomic-router: 0.12.0(effector@23.3.0)(history@5.3.0)
+      clsx: 2.1.1
+      effector: 23.3.0
+      effector-react: 23.3.0(effector@23.3.0)(react@19.1.0)
+      react: 19.1.0
+
+  atomic-router@0.12.0(effector@23.3.0)(history@5.3.0):
+    dependencies:
+      effector: 23.3.0
+      history: 5.3.0
+      path-to-regexp: 6.3.0
 
   balanced-match@1.0.2: {}
 
@@ -2035,6 +2105,10 @@ snapshots:
       color-name: 1.1.4
 
   color-name@1.1.4: {}
+
+  compose-function@3.0.3:
+    dependencies:
+      arity-n: 1.0.4
 
   confbox@0.1.8: {}
 
@@ -2144,6 +2218,10 @@ snapshots:
       is-glob: 4.0.3
 
   graceful-fs@4.2.11: {}
+
+  history@5.3.0:
+    dependencies:
+      '@babel/runtime': 7.27.6
 
   hookable@5.5.3: {}
 
@@ -2334,6 +2412,8 @@ snapshots:
   path-browserify@1.0.1: {}
 
   path-is-absolute@1.0.1: {}
+
+  path-to-regexp@6.3.0: {}
 
   pathe@1.1.2: {}
 

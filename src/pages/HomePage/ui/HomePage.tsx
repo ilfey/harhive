@@ -1,10 +1,10 @@
-import {BaseLayout} from 'widgets/BaseLayout';
-import {Grid} from "./Grid/Grid";
+import "../model"
+import {Grid} from "./Grid";
 
 export const HomePage = () => {
   return (
-    <BaseLayout>
-      <Grid />
-    </BaseLayout>
+    <Grid />
   );
 };
+
+export default HomePage;

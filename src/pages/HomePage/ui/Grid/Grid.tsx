@@ -3,19 +3,20 @@ import {css} from "generated/css";
 import {Masonry, useInfiniteLoader} from "masonic";
 import {useWindowSize} from "shared/lib/hooks/useWindowSize";
 import {Image} from "shared/ui/Image";
-import {$images, fetchImages} from "../../model";
+import {homePageModel} from "../../model";
+
 
 export const Grid = () => {
   const {
     loadMoreImages,
   } = useUnit({
-    loadMoreImages: fetchImages,
+    loadMoreImages: homePageModel.fetchImages,
   });
 
   const {
     images,
   } = useUnit({
-    images: $images,
+    images: homePageModel.$images,
   });
 
   const loadMore = (startIndex: number, stopIndex: number) =>
@@ -47,7 +48,7 @@ export const Grid = () => {
       key={crypto.randomUUID()}
       onRender={handleOnRender}
       items={images}
-      itemKey={(image) => image.id}
+      itemKey={(image, index) => 'card-' + image.id + '-' + index}
       columnCount={columnsCount}
       columnGutter={16}
       columnWidth={172}

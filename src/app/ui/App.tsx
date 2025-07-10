@@ -1,7 +1,14 @@
-import {HomePage} from 'pages/HomePage';
+import compose from "compose-function";
+import {Pages} from "../lib/routing";
+import {withErrorBoundary} from "./ErrorBoundary";
+import {withRouterProvider} from "./RouterProvider";
 
-export const App = () => {
-  return (
-    <HomePage />
-  )
-}
+
+const withProviders = compose(
+  withErrorBoundary,
+  withRouterProvider,
+)
+
+export const App = withProviders(() => (
+  <Pages />
+));

@@ -1,5 +1,5 @@
 import {box, vstack} from "generated/patterns";
-import {ReactNode} from 'react';
+import {ReactNode, Suspense} from 'react';
 import './BaseLayout.scss';
 
 type BaseLayoutProps = {
@@ -35,3 +35,23 @@ const layoutChild = box({
   w: '100%',
   marginInline: 'auto',
 });
+
+type BaseLayoutWithArgs = {
+  props?: BaseLayoutProps;
+  suspense?: boolean;
+}
+
+BaseLayout.with = (args: BaseLayoutWithArgs) =>
+  ({children}: BaseLayoutProps) => {
+    return (
+      <BaseLayout>
+        {args.suspense ? (
+          <Suspense fallback={null}>
+            {children}
+          </Suspense>
+        ) : (
+          children
+        )}
+      </BaseLayout>
+    )
+  }
