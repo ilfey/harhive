@@ -5,7 +5,7 @@ import {routerControls, routes} from "shared/routing";
 
 
 export const router = createHistoryRouter({
-  base: isGithubPages ? '/harhive/' : undefined,
+  base: isGithubPages ? '/harhive' : undefined,
   controls: routerControls,
   routes: [
     {
