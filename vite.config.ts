@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react-swc';
+import preload from "vite-plugin-preload";
 import browserslist from 'browserslist';
 import {browserslistToTargets} from "lightningcss";
 import {resolve} from 'path'
@@ -12,6 +13,7 @@ export default defineConfig({
   base: isGithubPages ? '/harhive/' : undefined,
   plugins: [
     react({plugins: [['@effector/swc-plugin', {}]]}),
+    preload(),
   ],
   css: {
     transformer: 'lightningcss',
