@@ -1,13 +1,11 @@
-import {createEvent, Event} from "effector";
+import { createEvent, Event } from "effector";
 
-export const atom = <T>(
-  factory: (mounted: Event<void>) => T
-) => {
-  const mounted = createEvent<void>()
+export const atom = <T>(factory: (mounted: Event<void>) => T) => {
+	const mounted = createEvent<void>();
 
-  const model = factory(mounted)
+	const model = factory(mounted);
 
-  mounted()
+	mounted();
 
-  return model
-}
+	return model;
+};

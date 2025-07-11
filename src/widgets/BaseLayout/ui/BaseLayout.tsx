@@ -1,57 +1,48 @@
-import {box, vstack} from "generated/patterns";
-import {ReactNode, Suspense} from 'react';
-import './BaseLayout.scss';
+import { box, vstack } from "generated/patterns";
+import { ReactNode, Suspense } from "react";
+import "./BaseLayout.scss";
 
 type BaseLayoutProps = {
-  children?: ReactNode;
-}
+	children?: ReactNode;
+};
 
-export const BaseLayout = ({children}: BaseLayoutProps): any => {
-  return (
-    <div
-      className={
-        vstack({
-          alignItems: 'center',
-        })
-      }
-    >
-      <header className={layoutChild}>
+export const BaseLayout = ({ children }: BaseLayoutProps) => {
+	return (
+		<div
+			className={vstack({
+				alignItems: "center",
+			})}
+		>
+			<header className={layoutChild}></header>
 
-      </header>
+			<main className={layoutChild}>{children}</main>
 
-      <main className={layoutChild}>
-        {children}
-      </main>
-
-      <footer className={layoutChild}>
-
-      </footer>
-    </div>
-  );
+			<footer className={layoutChild}></footer>
+		</div>
+	);
 };
 
 const layoutChild = box({
-  maxW: 1440,
-  w: '100%',
-  marginInline: 'auto',
+	maxW: 1440,
+	w: "100%",
+	marginInline: "auto",
 });
 
 type BaseLayoutWithArgs = {
-  props?: BaseLayoutProps;
-  suspense?: boolean;
-}
+	props?: BaseLayoutProps;
+	suspense?: boolean;
+};
 
-BaseLayout.with = (args: BaseLayoutWithArgs) =>
-  ({children}: BaseLayoutProps) => {
-    return (
-      <BaseLayout>
-        {args.suspense ? (
-          <Suspense fallback={null}>
-            {children}
-          </Suspense>
-        ) : (
-          children
-        )}
-      </BaseLayout>
-    )
-  }
+BaseLayout.with =
+	(args: BaseLayoutWithArgs) =>
+	({ children }: BaseLayoutProps) => {
+		return (
+			<BaseLayout>
+				{args.suspense ? (
+					<Suspense fallback={null}>{children}</Suspense>
+				) : (
+					children
+				)}
+			</BaseLayout>
+		);
+	};

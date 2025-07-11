@@ -1,2 +1,2 @@
-export * from "./model"
-export {createImagesQuery} from "./requests"
+export * from "./model";
+export { createImagesQuery } from "./requests";

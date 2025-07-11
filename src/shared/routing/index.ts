@@ -1,7 +1,7 @@
-import {createRoute, createRouterControls} from "atomic-router";
+import { createRoute, createRouterControls } from "atomic-router";
 
-export const routerControls = createRouterControls()
+export const routerControls = createRouterControls();
 
 export const routes = {
-  homePage: createRoute(),
-}
+	homePage: createRoute(),
+};

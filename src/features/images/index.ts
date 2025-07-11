@@ -1,1 +1,1 @@
-export {imagesModel} from "./model"
+export { imagesModel } from "./model";

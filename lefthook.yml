@@ -1,0 +1,12 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+#
+
+pre-commit:
+  commands:
+    check:
+      glob: "*.{ts,d.ts,jsx,tsx,json}"
+      run: pnpm run format --no-errors-on-unmatched --error-on-warnings --files-ignore-unknown=true --colors=off {staged_files}
+#      stage_fixed: true

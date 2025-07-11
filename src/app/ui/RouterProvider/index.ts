@@ -1,1 +1,1 @@
-export {withRouterProvider} from "./RouterProvider";
+export { withRouterProvider } from "./RouterProvider";

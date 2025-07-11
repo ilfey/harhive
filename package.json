@@ -1,43 +1,47 @@
 {
-  "name": "harhive",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "prepare": "panda",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@farfetched/core": "^0.13.2",
-    "@withease/contracts": "^1.1.0",
-    "atomic-router": "^0.12.0",
-    "atomic-router-react": "^0.12.1",
-    "clsx": "^2.1.1",
-    "compose-function": "^3.0.3",
-    "effector": "^23.3.0",
-    "effector-react": "^23.3.0",
-    "history": "^5.3.0",
-    "masonic": "^4.1.0",
-    "patronum": "^2.3.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
-  },
-  "devDependencies": {
-    "@effector/swc-plugin": "^0.8.0",
-    "@pandacss/dev": "^0.54.0",
-    "@types/compose-function": "^0.0.33",
-    "@types/node": "^24.0.7",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react-swc": "^3.10.2",
-    "browserslist": "^4.25.1",
-    "lightningcss": "^1.30.1",
-    "sass": "^1.89.2",
-    "typescript": "~5.8.3",
-    "vite": "^7.0.0",
-    "vite-plugin-preload": "^0.4.2",
-    "vite-plugin-pwa": "^1.0.1"
-  }
+	"name": "harhive",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"prepare": "panda",
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "biome check",
+		"format": "biome check --write"
+	},
+	"dependencies": {
+		"@farfetched/core": "^0.13.2",
+		"@withease/contracts": "^1.1.0",
+		"atomic-router": "^0.12.0",
+		"atomic-router-react": "^0.12.1",
+		"clsx": "^2.1.1",
+		"compose-function": "^3.0.3",
+		"effector": "^23.3.0",
+		"effector-react": "^23.3.0",
+		"history": "^5.3.0",
+		"masonic": "^4.1.0",
+		"patronum": "^2.3.0",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.1.1",
+		"@effector/swc-plugin": "^0.8.0",
+		"@pandacss/dev": "^0.54.0",
+		"@types/compose-function": "^0.0.33",
+		"@types/node": "^24.0.7",
+		"@types/react": "^19.1.8",
+		"@types/react-dom": "^19.1.6",
+		"@vitejs/plugin-react-swc": "^3.10.2",
+		"browserslist": "^4.25.1",
+		"lefthook": "^1.12.1",
+		"lightningcss": "^1.30.1",
+		"sass": "^1.89.2",
+		"typescript": "~5.8.3",
+		"vite": "^7.0.0",
+		"vite-plugin-preload": "^0.4.2",
+		"vite-plugin-pwa": "^1.0.1"
+	}
 }
