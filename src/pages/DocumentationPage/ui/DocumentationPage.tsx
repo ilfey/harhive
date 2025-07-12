@@ -196,11 +196,9 @@ export const DocumentationPage = () => {
 					summary="Получить первую страницу списка персонажей (30 на странице),
           отсортированных по имени в обратном порядке"
 				>
-					<p className={text()}>
-						<Code>
-							https://harhive.pp.ua/api/v3?action=get_characters&amp;sort=name_desc&amp;limit=30&amp;page=1
-						</Code>
-					</p>
+					<BlockCode>
+						https://harhive.pp.ua/api/v3?action=get_characters&amp;sort=name_desc&amp;limit=30&amp;page=1
+					</BlockCode>
 				</AccordionItem>
 
 				<AccordionItem
