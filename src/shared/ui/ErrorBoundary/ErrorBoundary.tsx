@@ -10,3 +10,9 @@ export class ErrorBoundary extends Component<{ children: ReactNode }> {
 		return this.props.children;
 	}
 }
+
+export const withErrorBoundary = (Component: () => ReactNode) => () => (
+	<ErrorBoundary>
+		<Component />
+	</ErrorBoundary>
+);

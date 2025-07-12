@@ -1,5 +1,5 @@
 import { createEvent, createStore, sample } from "effector";
-import { imagesModel } from "features/images";
+import { imagesModel } from "models/images";
 import { not } from "patronum";
 import { ImageItem } from "shared/api/image";
 import { atom } from "shared/lib/utils/atom";

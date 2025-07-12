@@ -1,1 +1,0 @@
-export { imagesModel } from "./model";

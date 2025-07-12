@@ -36,7 +36,7 @@ export default defineConfig({
 		alias: {
 			pages: resolve(__dirname, "./src/pages"),
 			widgets: resolve(__dirname, "./src/widgets"),
-			features: resolve(__dirname, "./src/features"),
+			models: resolve(__dirname, "./src/models"),
 			shared: resolve(__dirname, "./src/shared"),
 			generated: resolve(__dirname, "./src/generated"),
 		},
