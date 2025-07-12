@@ -43,7 +43,7 @@ export const Grid = () => {
 			key={crypto.randomUUID()}
 			onRender={handleOnRender}
 			items={images}
-			itemKey={(image, index) => "card-" + image.id + "-" + index}
+			itemKey={(image, index) => `card-${image.id}-${index}`}
 			columnCount={columnsCount}
 			columnGutter={16}
 			columnWidth={172}

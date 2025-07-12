@@ -4,4 +4,5 @@ export const routerControls = createRouterControls();
 
 export const routes = {
 	homePage: createRoute(),
+	documentationPage: createRoute(),
 };
