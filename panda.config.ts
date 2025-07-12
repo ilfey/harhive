@@ -42,6 +42,9 @@ export default defineConfig({
 			recipes: {
 				text: defineRecipe({
 					className: "text",
+					base: {
+						textDecoration: "none",
+					},
 					variants: {
 						font: {
 							serif: { fontFamily: "Inter" },
