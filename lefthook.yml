@@ -5,8 +5,12 @@
 #
 
 pre-commit:
+  parallel: true
   commands:
-    check:
-      glob: "*.{ts,d.ts,jsx,tsx,json}"
+    check-types:
+      glob: "*.{ts,d.ts,tsx}"
+      run: pnpm run lint:types
+    format:
+      glob: "*.{ts,d.ts,tsx,json}"
       run: pnpm run format --no-errors-on-unmatched --error-on-warnings --files-ignore-unknown=true --colors=off {staged_files}
 #      stage_fixed: true

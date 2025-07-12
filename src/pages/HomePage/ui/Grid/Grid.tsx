@@ -2,7 +2,7 @@ import { useUnit } from "effector-react";
 import { css } from "generated/css";
 import { Masonry, useInfiniteLoader } from "masonic";
 import { useWindowSize } from "shared/lib/hooks/useWindowSize";
-import { Image } from "shared/ui/Image";
+import { Image } from "shared/ui/kit/Image";
 import { homePageModel } from "../../model";
 
 export const Grid = () => {

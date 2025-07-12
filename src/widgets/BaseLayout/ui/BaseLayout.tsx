@@ -25,7 +25,8 @@ export const BaseLayout = ({ children }: BaseLayoutProps) => {
 const layoutChild = box({
 	maxW: 1440,
 	w: "100%",
-	marginInline: "auto",
+	mx: "auto",
+	px: 4,
 });
 
 type BaseLayoutWithArgs = {

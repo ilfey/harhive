@@ -9,6 +9,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "biome check",
+		"lint:types": "tsc -b",
 		"format": "biome check --write"
 	},
 	"dependencies": {
